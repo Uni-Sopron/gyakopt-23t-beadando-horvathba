@@ -24,12 +24,11 @@ param Alkatreszigeny:
     
     
     
-    param ExtraAlkatreszigeny:
+param ExtraKompatibilitas:
               Vw    Audi   Suzuki Opel :=
     GPS        0     1      0     1
     Ulesfutes  0      0    1      1
     Chip        1     1     0      1;
-    
     
     
     
