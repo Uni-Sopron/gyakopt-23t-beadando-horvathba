@@ -1,0 +1,77 @@
+Problem:    CarIndustry
+Rows:       19
+Columns:    4
+Non-zeros:  50
+Status:     OPTIMAL
+Objective:  Teljes_Bevetel = 13733.33333 (MAXimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 Keszlet_korl[Turbo]
+                    B        29.3333                         320 
+     2 Keszlet_korl[Klimakompresszor]
+                    NU           140                         140       166.667 
+     3 Keszlet_korl[Kipufogodob]
+                    B        55.6667                         360 
+     4 Keszlet_korl[Csavarok]
+                    B        5033.33                       12000 
+     5 Keszlet_korl[Kabelek]
+                    B          11120                       12700 
+     6 Felh_Minimumfelhasznalas[Turbo]
+                    B        29.3333            -0               
+     7 Felh_Minimumfelhasznalas[Klimakompresszor]
+                    B            140            -0               
+     8 Felh_Minimumfelhasznalas[Kipufogodob]
+                    B        55.6667            -0               
+     9 Felh_Minimumfelhasznalas[Csavarok]
+                    B        5033.33          4000               
+    10 Felh_Minimumfelhasznalas[Kabelek]
+                    B          11120          3500               
+    11 Rendelesek_[Vw]
+                    B              3             3               
+    12 Rendelesek_[Audi]
+                    B        20.3333             4               
+    13 Rendelesek_[Suzuki]
+                    B              0            -0               
+    14 Rendelesek_[Opel]
+                    B              3            -0               
+    15 Tultermeles_[Vw]
+                    B              3                      1e+100 
+    16 Tultermeles_[Audi]
+                    B        20.3333                      1e+100 
+    17 Tultermeles_[Suzuki]
+                    B              0                           1 
+    18 Tultermeles_[Opel]
+                    B              3                           3 
+    19 Teljes_Bevetel
+                    B        13733.3                             
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 gyartas[Vw]  NL             3             3        1e+100      -10666.7 
+     2 gyartas[Audi]
+                    B        20.3333             4        1e+100 
+     3 gyartas[Suzuki]
+                    NL             0             0             1         -1480 
+     4 gyartas[Opel]
+                    NU             3             0             3       7466.67 
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 6.82e-13 on column 1
+        max.rel.err = 5.11e-16 on column 1
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
