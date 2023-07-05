@@ -1,76 +1,86 @@
-Problem:    CarIndustry
-Rows:       19
-Columns:    4
-Non-zeros:  50
-Status:     OPTIMAL
-Objective:  Teljes_Bevetel = 13733.33333 (MAXimum)
+Problem:    CarIndustry_V2
+Rows:       16
+Columns:    16 (16 integer, 13 binary)
+Non-zeros:  57
+Status:     INTEGER OPTIMAL
+Objective:  Teljes_Bevetel = 60400 (MAXimum)
 
-   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
------- ------------ -- ------------- ------------- ------------- -------------
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
      1 Keszlet_korl[Turbo]
-                    B        29.3333                         320 
+                                1910                        3200 
      2 Keszlet_korl[Klimakompresszor]
-                    NU           140                         140       166.667 
+                                 959                        1400 
      3 Keszlet_korl[Kipufogodob]
-                    B        55.6667                         360 
+                                 191                         360 
      4 Keszlet_korl[Csavarok]
-                    B        5033.33                       12000 
+                                4011                       12000 
      5 Keszlet_korl[Kabelek]
-                    B          11120                       12700 
+                                4011                       12700 
      6 Felh_Minimumfelhasznalas[Turbo]
-                    B        29.3333            -0               
+                                1910            -0               
      7 Felh_Minimumfelhasznalas[Klimakompresszor]
-                    B            140            -0               
+                                 959            -0               
      8 Felh_Minimumfelhasznalas[Kipufogodob]
-                    B        55.6667            -0               
+                                 191            -0               
      9 Felh_Minimumfelhasznalas[Csavarok]
-                    B        5033.33          4000               
+                                4011          4000               
     10 Felh_Minimumfelhasznalas[Kabelek]
-                    B          11120          3500               
-    11 Rendelesek_[Vw]
-                    B              3             3               
-    12 Rendelesek_[Audi]
-                    B        20.3333             4               
-    13 Rendelesek_[Suzuki]
-                    B              0            -0               
-    14 Rendelesek_[Opel]
-                    B              3            -0               
-    15 Tultermeles_[Vw]
-                    B              3                      1e+100 
-    16 Tultermeles_[Audi]
-                    B        20.3333                      1e+100 
-    17 Tultermeles_[Suzuki]
-                    B              0                           1 
-    18 Tultermeles_[Opel]
-                    B              3                           3 
-    19 Teljes_Bevetel
-                    B        13733.3                             
+                                4011          3500               
+    11 Extra_beszereles[GPS,Vw]
+                                   0            -0             = 
+    12 Extra_beszereles[GPS,Suzuki]
+                                   0            -0             = 
+    13 Extra_beszereles[Ulesfutes,Vw]
+                                   0            -0             = 
+    14 Extra_beszereles[Ulesfutes,Audi]
+                                   0            -0             = 
+    15 Extra_beszereles[Chip,Suzuki]
+                                   0            -0             = 
+    16 Teljes_Bevetel
+                                   0                             
 
-   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
------- ------------ -- ------------- ------------- ------------- -------------
-     1 gyartas[Vw]  NL             3             3        1e+100      -10666.7 
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 gyartas[Vw]  *            187             3        1e+100 
      2 gyartas[Audi]
-                    B        20.3333             4        1e+100 
+                    *              4             4        1e+100 
      3 gyartas[Suzuki]
-                    NL             0             0             1         -1480 
+                    *              0             0             1 
      4 gyartas[Opel]
-                    NU             3             0             3       7466.67 
+                    *              0             0             3 
+     5 extrakBeepitve[GPS,Vw]
+                    *              0             0             1 
+     6 extrakBeepitve[GPS,Suzuki]
+                    *              0             0             1 
+     7 extrakBeepitve[Ulesfutes,Vw]
+                    *              0             0             1 
+     8 extrakBeepitve[Ulesfutes,Audi]
+                    *              0             0             1 
+     9 extrakBeepitve[Chip,Suzuki]
+                    *              0             0             1 
+    10 extrakBeepitve[GPS,Audi]
+                    *              0             0             1 
+    11 extrakBeepitve[GPS,Opel]
+                    *              0             0             1 
+    12 extrakBeepitve[Ulesfutes,Suzuki]
+                    *              0             0             1 
+    13 extrakBeepitve[Ulesfutes,Opel]
+                    *              0             0             1 
+    14 extrakBeepitve[Chip,Vw]
+                    *              0             0             1 
+    15 extrakBeepitve[Chip,Audi]
+                    *              0             0             1 
+    16 extrakBeepitve[Chip,Opel]
+                    *              0             0             1 
 
-Karush-Kuhn-Tucker optimality conditions:
+Integer feasibility conditions:
 
 KKT.PE: max.abs.err = 0.00e+00 on row 0
         max.rel.err = 0.00e+00 on row 0
         High quality
 
 KKT.PB: max.abs.err = 0.00e+00 on row 0
-        max.rel.err = 0.00e+00 on row 0
-        High quality
-
-KKT.DE: max.abs.err = 6.82e-13 on column 1
-        max.rel.err = 5.11e-16 on column 1
-        High quality
-
-KKT.DB: max.abs.err = 0.00e+00 on row 0
         max.rel.err = 0.00e+00 on row 0
         High quality
 
