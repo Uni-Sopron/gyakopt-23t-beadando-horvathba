@@ -44,7 +44,8 @@ solve;
         param felhasznaltExtrak {e in Extrak} :=
         sum {k in Kocsik} ExtraAlkatreszigeny[e,k] * gyartas[k];
 
-printf "Bevétel: %g\n", ceil(sum {k in Kocsik} ceil((Ar[k] - sum {a in Alkatreszek} felhasznalas[a] * AlkatreszAr[a])  * gyartas[k] - sum {e in Extrak} ExtraAlkatreszigeny[e,k] * ExtrakAr[e])  * gyartas[k]);
+printf "Bevétel: %g\n",  sum {k in Kocsik} (Ar[k] - sum {a in Alkatreszek} felhasznalas[a] * AlkatreszAr[a]) 
+    - sum {e in Extrak, k in Kocsik} extrakBeepitve[e,k] * ExtrakAr[e];
 
 printf "\n";
 
