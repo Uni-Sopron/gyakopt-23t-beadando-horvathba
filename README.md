@@ -116,21 +116,21 @@ s.t. Extra_beszereles {e in Extrak, k in Kocsik : ExtraAlkatreszigeny[e,k] <> 1}
 ## Kimenet
 
 ```
-OPTIMAL LP SOLUTION FOUND
-Time used:   0.0 secs
-Memory used: 0.1 Mb (128901 bytes)
-Bevétel: 13734
+Bevétel: 60400
 
-- Vw: 3
-- Audi: 21
+- Vw: 187
+- Audi: 4
 - Suzuki: 0
-- Opel: 3
+- Opel: 0
 
-Felhasznált Turbo: 30
-Felhasznált Klimakompresszor: 140
-Felhasznált Kipufogodob: 56
-Felhasznált Csavarok: 5034
-Felhasznált Kabelek: 11121
+Felhasznált Turbo: 1910
+Felhasznált Klimakompresszor: 959
+Felhasznált Kipufogodob: 191
+Felhasznált Csavarok: 4011
+Felhasznált Kabelek: 4011
+Felhasznált Extrák: GPS: 4
+Felhasznált Extrák: Ulesfutes: 0
+Felhasznált Extrák: Chip: 191
 
 ```
 
