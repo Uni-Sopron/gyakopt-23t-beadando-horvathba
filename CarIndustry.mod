@@ -12,6 +12,8 @@ param felhasznalas {a in Alkatreszek}, >=0, <=Keszlet[a], default 0;
 param Rendelesek {k in Kocsik}, >=0, default 0;
 param Tulgyartas {k in Kocsik}, >=Rendelesek[k], default 1e100;
 
+param M := 100;
+
 var gyartas {k in Kocsik},integer, >=Rendelesek[k], <=Tulgyartas[k];
 
 var extrakBeepitve {Extrak,Kocsik} binary;  # Bináris változó az extra alkatrészekhez
@@ -20,14 +22,12 @@ var extrakBeepitve {Extrak,Kocsik} binary;  # Bináris változó az extra alkatr
 
 s.t. Keszlet_korl {a in Alkatreszek: Keszlet[a] < 1e100}:
 	sum {k in Kocsik} Alkatreszigeny [a,k] * gyartas[k] <= Keszlet[a];
-    
+        
 s.t. Felh_Minimumfelhasznalas {a in Alkatreszek}:
-    	sum {k in Kocsik} Alkatreszigeny[a,k] * gyartas[k] >= felhasznalas[a];
+    sum {k in Kocsik} Alkatreszigeny[a,k] * gyartas[k] >= felhasznalas[a];
     
-    
-s.t. Extra_beszereles {e in Extrak, k in Kocsik : ExtraKompatibilitas[e,k] <> 1}:
-    	extrakBeepitve[e,k] = 0;
-    
+    s.t. Extra_BigM {e in Extrak, k in Kocsik}:
+    extrakBeepitve[e,k] <= ExtraKompatibilitas[e,k] * M;  # Big M constraint
     
 
 
@@ -68,4 +68,5 @@ for { e in Extrak }
 {
  printf "Felhasznált Extrák: %s: %g\n", e, ceil(felhasznaltExtrak[e]);
 }
+
 end;
