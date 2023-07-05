@@ -2,9 +2,11 @@ set Kocsik := Vw Audi Suzuki Opel;
 
 set Alkatreszek := Turbo Klimakompresszor Kipufogodob Csavarok Kabelek;
 
+set Extrak := GPS Ulesfutes Chip;
+
 param Keszlet :=
-    Turbo 320
-    Klimakompresszor 140
+    Turbo 3200
+    Klimakompresszor 1400
     Kipufogodob 360
     Csavarok 12000
     Kabelek 12700
@@ -13,19 +15,31 @@ param Keszlet :=
 param Alkatreszigeny:
 
              Vw    Audi   Suzuki Opel :=
-    Turbo        2     1      0     1
-    Klimakompresszor  4      6    3      2
-    Kipufogodob    4    2    2    1
-    Csavarok   230       190      210   160
-    Kabelek    400      420    440     460
-    ;
+    Turbo        10     10       10    10
+    Klimakompresszor  5      6   7     8
+    Kipufogodob    1    1    10    10
+    Csavarok   21       21      21  20
+    Kabelek    21      21    21     21;
+    
+    
+    
+    
+    param ExtraAlkatreszigeny:
+              Vw    Audi   Suzuki Opel :=
+    GPS        0     1      0     1
+    Ulesfutes  0      0    1      1
+    Chip        1     1     0      1;
+    
+    
+    
+    
 
 param Ar :=
 
-    Vw 1000
-    Audi 12000
-    Suzuki 10020
-    Opel   18800
+    Vw 1400
+    Audi 99000
+    Suzuki 3000
+    Opel   1000
     ;
 
 param AlkatreszAr :=
@@ -36,6 +50,16 @@ param AlkatreszAr :=
     Csavarok 1
     Kabelek 2
     ;
+    
+    param ExtrakAr :=
+    GPS 50
+    Ulesfutes 10
+    Chip 20
+    ;
+    
+    
+    
+    
 
 param felhasznalas :=
 
