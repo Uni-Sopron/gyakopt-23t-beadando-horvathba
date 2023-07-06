@@ -12,7 +12,7 @@ param felhasznalas {a in Alkatreszek}, >=0, <=Keszlet[a], default 0;
 param Rendelesek {k in Kocsik}, >=0, default 0;
 param Tulgyartas {k in Kocsik}, >=Rendelesek[k], default 1e100;
 
-param M := 100;
+
 
 var gyartas {k in Kocsik},integer, >=Rendelesek[k], <=Tulgyartas[k];
 
@@ -26,8 +26,8 @@ s.t. Keszlet_korl {a in Alkatreszek: Keszlet[a] < 1e100}:
 s.t. Felh_Minimumfelhasznalas {a in Alkatreszek}:
     sum {k in Kocsik} Alkatreszigeny[a,k] * gyartas[k] >= felhasznalas[a];
     
-    s.t. Extra_BigM {e in Extrak, k in Kocsik}:
-    extrakBeepitve[e,k] <= ExtraKompatibilitas[e,k] * M;  # Big M constraint
+s.t. Extra_Kompatibilitas {e in Extrak, k in Kocsik : ExtraKompatibilitas[e,k] <> 1}:
+   extrakBeepitve[e,k] = 0;
     
 
 
