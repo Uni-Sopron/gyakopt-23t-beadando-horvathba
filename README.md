@@ -42,7 +42,7 @@ param Alkatreszigeny:
     
     
     
-    param ExtraAlkatreszigeny:
+    param ExtraKompatibilitas:
               Vw    Audi   Suzuki Opel :=
     GPS        0     1      0     1
     Ulesfutes  0      0    1      1
@@ -106,10 +106,8 @@ s.t. Keszlet_korl {a in Alkatreszek: Keszlet[a] < 1e100}:
 s.t. Felh_Minimumfelhasznalas {a in Alkatreszek}:
     sum {k in Kocsik} Alkatreszigeny[a,k] * gyartas[k] >= felhasznalas[a];
     
-    
-s.t. Extra_beszereles {e in Extrak, k in Kocsik : ExtraAlkatreszigeny[e,k] <> 1}:
-    extrakBeepitve[e,k] = 0;
-    
+s.t. Extra_Kompatibilitas {e in Extrak, k in Kocsik : ExtraKompatibilitas[e,k] <> 1}:
+   extrakBeepitve[e,k] = 0
 
 
 ```
