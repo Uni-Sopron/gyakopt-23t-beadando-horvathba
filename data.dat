@@ -23,12 +23,28 @@ param Alkatreszigeny:
     
     
     
+
+param ExtrakAlkatreszigeny:
+
+             GPS    Ulesfutes   Chip :=
+    Turbo        1     2       0  
+    Klimakompresszor  2    3   7    
+    Kipufogodob    0    1    10    
+    Csavarok   10       5     8  
+    Kabelek    10      5    26    ;
+
+  
+
     
-param ExtraKompatibilitas:
+    
+    
+    param ExtraKompatibilitas:
               Vw    Audi   Suzuki Opel :=
     GPS        0     1      0     1
     Ulesfutes  0      0    1      1
     Chip        1     1     0      1;
+    
+    
     
     
     
@@ -57,8 +73,6 @@ param AlkatreszAr :=
     ;
     
     
-    
-    
 
 param felhasznalas :=
 
@@ -67,14 +81,25 @@ param felhasznalas :=
     Kabelek 3500
     ;
 
-param Rendelesek :=
 
-    Vw  3
-    Audi 4
-    ;
+
+
+
+
+param Gyartjuke := 
+
+Vw 0
+Audi 1
+Suzuki 0
+Opel 1
+
+;
+
+
 
 param Tulgyartas :=
 
     Opel 3
     Suzuki 1	
     ;
+
