@@ -1,0 +1,87 @@
+Problem:    CarIndustry_V2
+Rows:       16
+Columns:    16 (16 integer, 13 binary)
+Non-zeros:  57
+Status:     INTEGER OPTIMAL
+Objective:  Teljes_Bevetel = 60400 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 Keszlet_korl[Turbo]
+                                1910                        3200 
+     2 Keszlet_korl[Klimakompresszor]
+                                 959                        1400 
+     3 Keszlet_korl[Kipufogodob]
+                                 191                         360 
+     4 Keszlet_korl[Csavarok]
+                                4011                       12000 
+     5 Keszlet_korl[Kabelek]
+                                4011                       12700 
+     6 Felh_Minimumfelhasznalas[Turbo]
+                                1910            -0               
+     7 Felh_Minimumfelhasznalas[Klimakompresszor]
+                                 959            -0               
+     8 Felh_Minimumfelhasznalas[Kipufogodob]
+                                 191            -0               
+     9 Felh_Minimumfelhasznalas[Csavarok]
+                                4011          4000               
+    10 Felh_Minimumfelhasznalas[Kabelek]
+                                4011          3500               
+    11 Extra_beszereles[GPS,Vw]
+                                   0            -0             = 
+    12 Extra_beszereles[GPS,Suzuki]
+                                   0            -0             = 
+    13 Extra_beszereles[Ulesfutes,Vw]
+                                   0            -0             = 
+    14 Extra_beszereles[Ulesfutes,Audi]
+                                   0            -0             = 
+    15 Extra_beszereles[Chip,Suzuki]
+                                   0            -0             = 
+    16 Teljes_Bevetel
+                                   0                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 gyartas[Vw]  *            187             3        1e+100 
+     2 gyartas[Audi]
+                    *              4             4        1e+100 
+     3 gyartas[Suzuki]
+                    *              0             0             1 
+     4 gyartas[Opel]
+                    *              0             0             3 
+     5 extrakBeepitve[GPS,Vw]
+                    *              0             0             1 
+     6 extrakBeepitve[GPS,Suzuki]
+                    *              0             0             1 
+     7 extrakBeepitve[Ulesfutes,Vw]
+                    *              0             0             1 
+     8 extrakBeepitve[Ulesfutes,Audi]
+                    *              0             0             1 
+     9 extrakBeepitve[Chip,Suzuki]
+                    *              0             0             1 
+    10 extrakBeepitve[GPS,Audi]
+                    *              0             0             1 
+    11 extrakBeepitve[GPS,Opel]
+                    *              0             0             1 
+    12 extrakBeepitve[Ulesfutes,Suzuki]
+                    *              0             0             1 
+    13 extrakBeepitve[Ulesfutes,Opel]
+                    *              0             0             1 
+    14 extrakBeepitve[Chip,Vw]
+                    *              0             0             1 
+    15 extrakBeepitve[Chip,Audi]
+                    *              0             0             1 
+    16 extrakBeepitve[Chip,Opel]
+                    *              0             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
